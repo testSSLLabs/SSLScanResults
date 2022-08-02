@@ -1,14 +1,14 @@
-# Create virtual environment:
+## Create virtual environment:
+```
+pip3 install virtualenv
 
-**pip3 install virtualenv**
+mkdir project_A
 
-**mkdir project_A**
+cd project_A
+virtualenv my_new_venv
 
-**cd project_A**
-
-**virtualenv my_new_venv**
-
-**source my_new_venv/bin/activate**
+source my_new_venv/bin/activate
+```
 
 # Clone the project repo and install dependency packages from requirements.txt :
 **git clone https://github.com/testSSLLabs/SSLScanResults.git**
@@ -34,17 +34,17 @@
    **python3 SSLScanResults/sslscanresults/sslscan-results.py**
 
 
-# Execute tool in a dockre instance
+# Execute tool in a docker instance
    **git clone https://github.com/testSSLLabs/SSLScanResults.git**
 
    **cd SSLScanResults**
 
-   **dockre build -t ssllab_report:21.0 .**
+   **docker build -t ssllab_report:21.0 .**
 
-Get the dockre image ID:
+Get the docker image ID:
 
-   **dockre images ssllab_report:21.0**
+   **docker images ssllab_report:21.0**
 
-Create dockre containre to execute the tool. Please use the --re option to specify the email to which reports must be sent.
+Create docker containre to execute the tool. Please use the --re option to specify the email to which reports must be sent.
 
-   **dockre run 00528c8085e4 python3 /project/SSLScanResults/sslscanresults/sslscan-results.py --re manoj.cis115@gmail.com**
+   **docker run 00528c8085e4 python3 /project/SSLScanResults/sslscanresults/sslscan-results.py --re manoj.cis115@gmail.com**
