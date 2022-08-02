@@ -14,8 +14,16 @@ pip3 install -r SSLScanResults/requirements.txt
 ```
 
 ## Execute the script:
+By default tool get its domain names host list by cloning Github Repo [https://github.com/testSSLLabs/SSLScanResults.git ](https://github.com/testSSLLabs/SSLLab_hosts_and_report). It retreives the domain names from the domain_names.yaml located in this repo. 
+Also, all the generated CSV/JSON/HTML reports are copied to Reports directory in the Repo and pushed the new changes to Master branch. 
+#### However, Tool must be executed in this manner ONLY with docker instance as Docker handles copying the private/public RSA keys required to push the new reports. 
+
+
 ### Local mode
-By default, by default tool get its domain names host list by cloning Github Repo https://github.com/testSSLLabs/SSLScanResults.git 
+- **NOTE**: Please execute the tool in Local Mode if you just want to get the emails with SSL reports of your domain names. In local mode
+            hosts are parsed from  SSLScanResults/sslscanresults/domain_names.yaml which you can locally edit to get desired hosts. 
+            Reports are saved locally in SSLScanResults/sslscanresults/Reports directory
+        
 1. If scan reports not required to be pushed to github repo then use --local option. Tool will take domains/hosts from sslscanresults/domain_names.yaml.
    --local option must be used if running the script and you do not have git auth keys.
    --re option must be used to specify the email address whree reports must be sent. By default reports are sent to manoj.cis@gmail.com.
