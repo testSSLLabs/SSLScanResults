@@ -1,21 +1,21 @@
 ## Create virtual environment:
 ```
 pip3 install virtualenv
-
 mkdir project_A
-
 cd project_A
 virtualenv my_new_venv
-
 source my_new_venv/bin/activate
 ```
 
-# Clone the project repo and install dependency packages from requirements.txt :
-**git clone https://github.com/testSSLLabs/SSLScanResults.git**
+## Clone the project repo and install dependency packages from requirements.txt :
+```
+git clone https://github.com/testSSLLabs/SSLScanResults.git
+pip3 install -r SSLScanResults/requirements.txt
+```
 
-**pip3 install -r SSLScanResults/requirements.txt**
-
-# Execute the script:
+## Execute the script:
+### Local mode
+By default, by default tool get its domain names host list by cloning Github Repo https://github.com/testSSLLabs/SSLScanResults.git 
 1. If scan reports not required to be pushed to github repo then use --local option. Tool will take domains/hosts from sslscanresults/domain_names.yaml.
    --local option must be used if running the script and you do not have git auth keys.
    --re option must be used to specify the email address whree reports must be sent. By default reports are sent to manoj.cis@gmail.com.
