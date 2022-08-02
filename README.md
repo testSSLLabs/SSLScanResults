@@ -41,7 +41,7 @@ python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@
 
 2. You can also specify the domain names with your own local domain_names.yaml file
 ``` 
-python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@gmail.com --domain_yaml /tmp/manjku/domain_names.yaml
+python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re test_your_email_adress@gmail.com --domain_yaml /tmp/manjku/domain_names.yaml
 ``` 
 
 ## Execute tool in a docker instance
@@ -58,5 +58,5 @@ docker images ssllab_report:20.0
 
 ### Create docker containre to execute the tool. Please use the --re option to specify the email to which reports must be sent.
 ``` 
-docker run 00528c8085e4 python3 /project/SSLScanResults/sslscanresults/sslscan-results.py --re manoj.cis115@gmail.com
+docker run 00528c8085e4 python3 /project/SSLScanResults/sslscanresults/sslscan-results.py --re test_your_email_adress@gmail.com
 ``` 
