@@ -11,7 +11,7 @@
 **source my_new_venv/bin/activate**
 
 # Clone the project repo and install dependency packages from requirements.txt :
-**https://github.com/testSSLLabs/SSLScanResults.git**
+**git clone https://github.com/testSSLLabs/SSLScanResults.git**
 
 **pip3 install -r SSLScanResults/requirements.txt**
 
