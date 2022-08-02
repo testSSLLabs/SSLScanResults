@@ -48,12 +48,12 @@ python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@
 ``` 
 git clone https://github.com/testSSLLabs/SSLScanResults.git
 cd SSLScanResults
-docker build -t ssllab_report:21.0 .
+docker build -t ssllab_report:20.0 .
 ``` 
 
 ### Get the docker image ID:
 ``` 
-docker images ssllab_report:1.0
+docker images ssllab_report:20.0
 ``` 
 
 ### Create docker containre to execute the tool. Please use the --re option to specify the email to which reports must be sent.
