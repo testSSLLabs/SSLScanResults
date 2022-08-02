@@ -6,7 +6,7 @@ The generated report is sent to the desired emails which is mandatory argument f
 Please see the sample reports at: https://github.com/testSSLLabs/SSLScanResults/tree/main/sslscanresults/Reports
 
 ## Sample Emails:
-![alt text](sslscanresults/sample_ssllabs_report.png "Sample Email Content")
+![alt text](sslscanresults/sample_ssllabs_reports_email.png "Sample Email Content")
 
 ## Create virtual environment:
 ```
