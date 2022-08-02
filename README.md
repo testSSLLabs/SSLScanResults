@@ -35,7 +35,7 @@ Also, all the generated CSV/JSON/HTML reports are copied to Reports directory in
             Reports are saved locally in **SSLScanResults/sslscanresults/Reports** directory
 - **--re (receiver email) is mandatory argument to email reports to desired receipients.**
 ``` 
-python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@gmail.com
+python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re test_your_email_adress@gmail.com
 ```
 
 
