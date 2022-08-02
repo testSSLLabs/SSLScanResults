@@ -62,7 +62,7 @@ def main():
         with open(domain_names_file) as file_data:
            domain_names_list = yaml.load(file_data, Loader=yaml.FullLoader)
     except Exception as Err:
-        loger.error("Domain files could not be opened due to error: /n{Err}")
+        logger.error("Domain files could not be opened due to error: /n{Err}")
 
     logger.info(f"hosts are {domain_names_list}")
     
