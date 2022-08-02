@@ -60,3 +60,4 @@ docker images ssllab_report:20.0
 ``` 
 docker run 00528c8085e4 python3 /project/SSLScanResults/sslscanresults/sslscan-results.py --re test_your_email_adress@gmail.com
 ``` 
+### If domains/hosts list need to be updated(addition/deletion) then you must GIT push the changes in https://github.com/testSSLLabs/SSLLab_hosts_and_report/blob/main/domain_names.yaml
