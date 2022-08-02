@@ -1,3 +1,13 @@
+This Tool generate the reports for a list of domain/hosts names and stores them in JSON/HTML/CSV Format. It uses Qualys SSL Labs API which is available at (https://github.com/ssllabs/ssllabs-scan/blob/stable/ssllabs-api-docs.md)
+
+The generated report is sent to the desired emails which is mandatory argument for the tool. 
+
+## Sample Reports
+Please see the sample reports at: https://github.com/testSSLLabs/SSLScanResults/tree/main/sslscanresults/Reports
+
+## Sample Emails:
+![alt text](sslscanresults/sample_ssllabs_report.png "Sample Email Content")
+
 ## Create virtual environment:
 ```
 pip3 install virtualenv
@@ -30,9 +40,9 @@ python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@
 
 
 2. You can also specify the domain names with your own local domain_names.yaml file
-
-   **python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@gmail.com --domain_yaml /tmp/manjku/domain_names.yaml**
-
+``` 
+python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re manoj.cis@gmail.com --domain_yaml /tmp/manjku/domain_names.yaml
+``` 
 
 ## Execute tool in a docker instance
 ``` 
