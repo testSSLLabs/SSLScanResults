@@ -40,7 +40,10 @@ SSLLAB_FORWARD_SECRECY = {
 }
 
 def get_ssllab_scan_results(host: str, csv_summary_file: str, number_of_attempts: int=20):
-    
+    """
+    Request SSLLabs API json data for a host and appends the formatted json data into CSV row
+    Returns SSLLabs API json data for a host
+    """
     ssllab_request_params = get_ssllab_request_params(host)
     sslab_scan_results = execute_api_url(ssllab_request_params, number_of_attempts) 
     # ssllab_request_params.pop("startNew")
@@ -73,6 +76,9 @@ def get_ssllab_scan_results(host: str, csv_summary_file: str, number_of_attempts
     return sslab_scan_results
 
 def get_ssllab_request_params(host: str):
+    """
+    Gets the parameters when request is sent to "https://api.ssllabs.com/api/v3/analyze"
+    """
     params = {
         "host": host,
         "ignoreMismatch":"on",
@@ -83,6 +89,9 @@ def get_ssllab_request_params(host: str):
     return params
     
 def execute_api_url(ssllab_request_params, number_of_attempts):
+    """
+    Prepares SSLLabs API call with parameters and return the json data
+    """
     api_response = requests.get(SSLAB_API_URL, params=ssllab_request_params)
     attempts = 0 
     
@@ -97,6 +106,10 @@ def execute_api_url(ssllab_request_params, number_of_attempts):
     return api_response.json()
 
 def summary_csv_append(host, sslab_data, csv_summary_file):
+    """
+    Parse the SSLLabs API json data for all host endpoints and sets the columns fields defined in SUMMARY_COLUMNS
+    Each host endpoint row is added to the CSV file
+    """
     try:
         with open(csv_summary_file, "a") as output_file:
             summary_csv = [] 
