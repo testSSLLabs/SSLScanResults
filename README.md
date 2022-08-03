@@ -41,7 +41,9 @@ python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re test_your_
 python3 SSLScanResults/sslscanresults/sslscan-results.py --local --re test_your_email_adress@gmail.com --domain_yaml /tmp/manjku/domain_names.yaml
 ``` 
 
-## Execute tool in a docker instance
+## Execute tool in a docker container
+When tool is executed inside docker container, It clones https://github.com/testSSLLabs/SSLLab_hosts_and_report/ and use the domain names from https://github.com/testSSLLabs/SSLLab_hosts_and_report/blob/main/domain_names.yaml
+
 ``` 
 git clone https://github.com/testSSLLabs/SSLScanResults.git
 cd SSLScanResults
