@@ -73,14 +73,6 @@ def get_ssllab_scan_results(host: str, csv_summary_file: str, number_of_attempts
     return sslab_scan_results
 
 def get_ssllab_request_params(host: str):
-    params1 = {
-        "host": host,
-        "ignoreMismatch":"on",
-        "all":"done",
-        "publish":"off",
-        "startNew":"off",
-    }
-    
     params = {
         "host": host,
         "ignoreMismatch":"on",
